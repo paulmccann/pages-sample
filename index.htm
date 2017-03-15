@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+
+
+</head>
+<body>
+
+  <script>
+
+var randcolor = "#";
+
+for ( var i = 0; i < 6; i++ ) {
+
+    var rand = Math.random();
+
+    rand = rand * 6;
+
+    rand = Math.floor(rand);
+
+    rand = rand.toString();
+
+    randcolor += rand;
+
+    console.log(randcolor);
+
+  }
+    document.write(randcolor);
+
+
+
+  // document.bgColor = "#ff00ff";
+
+  document.bgColor = randcolor;
+
+
+  </script>
+</body>
+</html>
