@@ -24,7 +24,7 @@ body {
   </form>
 
 
-<h1 onclick="changeColor(this, 'purple')"> text that will change if you click on it</h1>
+<h1 onclick="changeColor(this, 'purple')">text that will change if you click on it</h1>
   
   
   <img src="creampuff.jpg">
@@ -40,11 +40,11 @@ elem.style.color = newColor;
 
 // a for loop that gives us a randomcolor between
 // #000000 and #999999
-var randcolor = "#";
+const randcolor = "#";
 
-for ( var i = 0; i < 6; i++ ) {
+for ( let i = 0; i < 6; i++ ) {
 
-    var rand = Math.random();
+    let rand = Math.random();
 
     rand = rand * 6;
     rand = Math.floor(rand);
@@ -65,15 +65,15 @@ document.bgColor = randcolor;
 // a full hex random color generator function
   function randomColorgenerator() {
 
-    var chars = "0123456789abcdef";
-    var color = "#";
+    const chars = "0123456789abcdef";
+    const color = "#";
 
-    for (var i=0; i<6; i++) {
-    	var rnd = Math.floor(16 * Math.random());
+    for (let i=0; i<6; i++) {
+    	let rnd = Math.floor(16 * Math.random());
     	color += chars.charAt(rnd);
     	} // end loop
 
-    var message = document.getElementById('message');
+    let message = document.getElementById('message');
     message.innerHTML = color;
 
     return color;
@@ -83,7 +83,7 @@ document.bgColor = randcolor;
 
 // a function that adds the function as a click to a button
   function addClicks() {
-   var bgButton = document.getElementById('bgChanger');
+   const bgButton = document.getElementById('bgChanger');
    bgButton.onclick = function() {
      document.bgColor = randomColorgenerator()
    };
